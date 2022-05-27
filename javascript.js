@@ -79,33 +79,13 @@ function computerPlay() {
             } else {
                         computerScore++;
                         return "Ai pierdut!";
-             }
-        }
-    }
+             };
+        };
+    };
 
 
 
 
-/* 
-function game() {
-  
-    for (let i=0; i<10; i++) {
-            let playerSelection = prompt("Alege :");
-                if (playerSelection !== "" ) {
-            const computerSelection = computerPlay();
-            console.log(playRound(playerSelection, computerSelection));
-            console.log("Scorul tau = " + userScore);
-            console.log("Scorul calculatorului = " + computerScore);
-    } else 
-        break;
-    }
-    }
-
-
-
-game()
-
- */
 
 
 let test = document.getElementById('test');
