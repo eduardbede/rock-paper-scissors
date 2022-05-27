@@ -6,6 +6,7 @@ function computerPlay() {
 
     let userScore = parseInt(0);
     let computerScore = parseInt(0);
+    let egal = parseInt(0);
 
     //asta e ala bun
 
@@ -52,6 +53,7 @@ function computerPlay() {
         
  function playRound ( playerSelection, computerSelection ) {
         if ( playerSelection.toLowerCase() === computerSelection ) {
+            egal++;
             return "Egal";
         } 
         else if ( playerSelection.toLowerCase() === "rock" ) {
@@ -62,8 +64,7 @@ function computerPlay() {
                 computerScore++;
                 return "Ai pierdut!";
             }
-        }
-        else if ( playerSelection.toLowerCase() === "paper" ) {
+        } else if ( playerSelection.toLowerCase() === "paper" ) {
             if ( computerSelection === "rock") {
                     userScore++;
                     return "Ai castigat!";
@@ -71,8 +72,7 @@ function computerPlay() {
                     computerScore++;
                     return "Ai pierdut!";
             }
-        }
-        else if ( playerSelection.toLowerCase() === "scissors" ) {
+        }  else if ( playerSelection.toLowerCase() === "scissors" ) {
             if ( computerSelection === "paper") {
                         userScore++;
                         return "Ai castigat!";
@@ -86,20 +86,60 @@ function computerPlay() {
 
 
 
+/* 
 function game() {
   
-    
-    for ( let i=0; i<5; i++ ) {
-        let playerSelection = prompt("Alege :");
-            if (playerSelection !== "" ) {
-        const computerSelection = computerPlay();
-        console.log(playRound(playerSelection, computerSelection));
-        console.log("Scorul tau = " + userScore);
-        console.log("Scorul calculatorului = " + computerScore);
-    } else {
+    for (let i=0; i<10; i++) {
+            let playerSelection = prompt("Alege :");
+                if (playerSelection !== "" ) {
+            const computerSelection = computerPlay();
+            console.log(playRound(playerSelection, computerSelection));
+            console.log("Scorul tau = " + userScore);
+            console.log("Scorul calculatorului = " + computerScore);
+    } else 
         break;
     }
-}
-}
+    }
+
+
 
 game()
+
+ */
+
+
+let test = document.getElementById('test');
+let test1 = document.getElementById('test1');
+
+
+
+const piatra = document.getElementById('btn1')
+
+piatra.addEventListener('click', () =>{
+   playRound("rock", computerPlay())
+   test.innerText = userScore;
+   test1.innerHTML = computerScore;
+   
+});
+
+
+
+const hartie = document.getElementById('btn2')
+
+hartie.addEventListener('click', () =>{
+   playRound("paper", computerPlay())
+   test.innerText =  userScore;
+   test1.innerHTML = computerScore;
+   
+});
+
+
+const foarfeca = document.getElementById('btn3')
+
+foarfeca.addEventListener('click', () =>{
+   playRound("scissors", computerPlay())
+   test.innerText = userScore;
+   test1.innerHTML = computerScore;
+  
+});
+
