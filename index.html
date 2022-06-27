@@ -4,24 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Papper Scissors</title>
     <link rel="stylesheet" href="css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     
-    <div id="select">
-        <button id="btn1" class="button-49" role="button">Piatra</button>
-        <button id="btn2" class="button-49" role="button">Hartie</button>
-        <button id="btn3" class="button-49" role="button">Forafeca</button>
-    </div>
-    
+    <div class="container">
+        <header>Rock Paper Scissors</header>
 
-    <div id="select1">
-        <div class ="select2"> Scorul tau: <div id="test" ></div></div>
-        <div class ="select2"> Scorul Calculatorului : <div id="test1"></div> </div>
-        
-    </div>
+        <div class="main">
+            <div class="allDivs">
+                <div class="roPaSc">
+                    <div class="rock">
+                        <img src="img/rock.png">
+                    </div>
+                    <div class="paper">
+                        <img src="img/paper.png">
+                    </div>
+                    <div class="scissors">
+                        <img src="img/scissors.png">
+                    </div>
+                </div>
 
+                <div class="choose">
+                    <div class="divChooseOne">
+                        <p>Your choose:</p>
+                        <div>
+                           <img id="imgPlayer" src="">
+                        </div>
+                    </div>
+                    <div class="divChooseTwo">
+                        <p>Computer choose:</p>
+                        <div>
+                            <img id="imgComputer" src="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="winner">
+                    <p id="paraWinner">Winner is:</p>
+                    <img id="imgWinner" src="">
+                </div>
+
+                <div class="scoreBoard">
+                    <p>Player Score:</p>
+                    <p class="playerDisplay">0</p>
+                    <p>Computer Score:</p>
+                    <p class="computerDisplay">0</p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div id="an">@eduardbede</div>
+            <a href="https://github.com/eduardbede">Visit GitHub</a>
+        </footer>
+    </div>
 
     <script src="javascript.js">
      
