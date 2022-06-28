@@ -151,7 +151,7 @@ max-height: 20vh;
   margin-bottom: 2px;
 }
 
-
+/*  media querry pentru mobile */
 @media (max-width: 576px){
   
   .roPaSc > :nth-child(1), 
@@ -191,4 +191,19 @@ header {
 .winner{
   height: 20vh;
 }
+}
+
+/* media querry pentru landscape */
+
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+  .winner {
+    font-size: 5vh;
+}
+  header {
+    font-size: 3vh;
+}
+  .choose img {
+    max-width: 18vh;
+}
+
 }
